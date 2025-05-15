@@ -51,7 +51,7 @@ const loginUser = async (req, res, next) => {
         // await find.save({ validateBeforeSave: false })
         return res.cookie("auth", token, {
             maxAge: 1 * 24 * 60 * 60 * 1000,
-            httpOnly: true, secure: true, sameSite: "Strict"
+            httpOnly: true, secure: true, sameSite: "None"
         }).status(200).json({ success: true, message: "Login SuccessFully!", user: find })
     } catch (error) {
         return next(new ErrorHandler(error.status, error.message))
