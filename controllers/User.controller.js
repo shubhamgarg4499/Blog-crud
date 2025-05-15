@@ -62,7 +62,7 @@ const logout = async (req, res, next) => {
         const { _id } = req.user
         if (!_id) return next(new ErrorHandler(403, "Unauthorised request!"))
         res.clearCookie("auth", {
-            httpOnly: true, secure: true, sameSite: "Strict"
+            httpOnly: true, secure: true, sameSite: "None"
         }).send({ message: "Logout Successfully!", success: true })
     } catch (error) {
         return next(new ErrorHandler(error.status, error.message))
