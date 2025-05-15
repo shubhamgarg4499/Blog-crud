@@ -76,4 +76,4 @@ const getpostbyid = async (req, res, next) => {
     }
 }
 
-module.exports = { createBlog, getAllBlog, deletePost, deletePost, getpostbyid, editBlog, changeFeaturedImage }
+module.exports = { createBlog, getAllBlog, deletePost, deletePost, getpostbyid, editBlog }
